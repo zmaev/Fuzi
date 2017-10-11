@@ -133,7 +133,7 @@ open class XMLElement: XMLNode {
 
   - returns: The children elements.
   */
-  open func children(tag: XMLCharsComparable, inNamespace ns: XMLCharsComparable? = nil) -> [XMLElement] {
+  open func getChildren(tag: XMLCharsComparable, inNamespace ns: XMLCharsComparable? = nil) -> [XMLElement] {
     return LinkedCNodes(head: cNode.pointee.children).flatMap {
       cXMLNode($0, matchesTag: tag, inNamespace: ns)
         ? XMLElement(cNode: $0, document: self.document) : nil
