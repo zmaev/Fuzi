@@ -140,10 +140,12 @@ open class XMLElement: XMLNode {
     }
   }
 
+  /*
   /// faster version of children with string literals (explicitly typed as StaticString)
   open func children(staticTag tag: StaticString, inNamespace ns: StaticString? = nil) -> [XMLElement] {
     return children(tag: tag, inNamespace: ns)
   }
+  */
 
   // MARK: - Accessing Content
   /// Whether the element has a value.
